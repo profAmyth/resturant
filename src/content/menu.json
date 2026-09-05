@@ -1,0 +1,272 @@
+[
+  {
+    "id": "seared-scallops",
+    "name": "Seared Scallops",
+    "description": "Pan-seared diver scallops, brown butter corn puree, chili oil",
+    "price": 19,
+    "category": "starters",
+    "dietaryTags": ["gf"],
+    "image": "/images/menu/seared-scallops.jpg",
+    "featured": true
+  },
+  {
+    "id": "charred-octopus",
+    "name": "Charred Octopus",
+    "description": "Fingerling potatoes, smoked paprika, salsa verde, lemon",
+    "price": 18,
+    "category": "starters",
+    "dietaryTags": ["gf", "df"],
+    "image": "/images/menu/charred-octopus.jpg"
+  },
+  {
+    "id": "whipped-ricotta-crostini",
+    "name": "Whipped Ricotta Crostini",
+    "description": "Grilled sourdough, honey, chili flake, thyme",
+    "price": 12,
+    "category": "starters",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/whipped-ricotta-crostini.jpg"
+  },
+  {
+    "id": "wild-mushroom-toast",
+    "name": "Wild Mushroom Toast",
+    "description": "Roasted wild mushrooms, taleggio, garlic confit, herb oil",
+    "price": 14,
+    "category": "starters",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/wild-mushroom-toast.jpg",
+    "available": false
+  },
+  {
+    "id": "copper-fork-salad",
+    "name": "Copper Fork Salad",
+    "description": "Little gem, shaved fennel, radish, pecorino, champagne vinaigrette",
+    "price": 13,
+    "category": "salads",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/copper-fork-salad.jpg",
+    "featured": true
+  },
+  {
+    "id": "roasted-beet-salad",
+    "name": "Roasted Beet Salad",
+    "description": "Whipped goat cheese, candied walnuts, arugula, orange",
+    "price": 14,
+    "category": "salads",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/roasted-beet-salad.jpg"
+  },
+  {
+    "id": "kale-caesar",
+    "name": "Kale Caesar",
+    "description": "Tuscan kale, sourdough croutons, shaved grana, white anchovy",
+    "price": 13,
+    "category": "salads",
+    "image": "/images/menu/kale-caesar.jpg"
+  },
+  {
+    "id": "braised-short-rib",
+    "name": "Braised Short Rib",
+    "description": "Red wine braise, parmesan polenta, charred broccolini",
+    "price": 32,
+    "category": "mains",
+    "dietaryTags": ["gf"],
+    "image": "/images/menu/braised-short-rib.jpg",
+    "featured": true
+  },
+  {
+    "id": "bone-in-ribeye",
+    "name": "Bone-In Ribeye",
+    "description": "16oz dry-aged ribeye, bone marrow butter, roasted fingerlings",
+    "price": 48,
+    "category": "mains",
+    "dietaryTags": ["gf"],
+    "image": "/images/menu/bone-in-ribeye.jpg"
+  },
+  {
+    "id": "pan-roasted-salmon",
+    "name": "Pan-Roasted Salmon",
+    "description": "Crispy skin salmon, English pea puree, radish, lemon butter",
+    "price": 29,
+    "category": "mains",
+    "dietaryTags": ["gf", "df"],
+    "image": "/images/menu/pan-roasted-salmon.jpg"
+  },
+  {
+    "id": "wild-mushroom-risotto",
+    "name": "Wild Mushroom Risotto",
+    "description": "Arborio rice, wild mushroom blend, parmesan, black truffle oil",
+    "price": 24,
+    "category": "mains",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/wild-mushroom-risotto.jpg"
+  },
+  {
+    "id": "roasted-half-chicken",
+    "name": "Roasted Half Chicken",
+    "description": "Herb butter, natural jus, roasted root vegetables",
+    "price": 26,
+    "category": "mains",
+    "dietaryTags": ["gf", "df"],
+    "image": "/images/menu/roasted-half-chicken.jpg"
+  },
+  {
+    "id": "cast-iron-cavatelli",
+    "name": "Cast Iron Cavatelli",
+    "description": "House-made cavatelli, brown butter, sage, roasted squash",
+    "price": 23,
+    "category": "mains",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/cast-iron-cavatelli.jpg"
+  },
+  {
+    "id": "copper-fork-burger",
+    "name": "Copper Fork Burger",
+    "description": "Dry-aged beef, aged cheddar, bacon jam, brioche bun",
+    "price": 18,
+    "category": "handhelds",
+    "image": "/images/menu/copper-fork-burger.jpg",
+    "featured": true
+  },
+  {
+    "id": "crispy-chicken-sandwich",
+    "name": "Crispy Chicken Sandwich",
+    "description": "Buttermilk fried chicken, pickles, honey hot sauce, brioche",
+    "price": 17,
+    "category": "handhelds",
+    "image": "/images/menu/crispy-chicken-sandwich.jpg"
+  },
+  {
+    "id": "grilled-vegetable-flatbread",
+    "name": "Grilled Vegetable Flatbread",
+    "description": "Charred seasonal vegetables, whipped feta, balsamic reduction",
+    "price": 16,
+    "category": "handhelds",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/grilled-vegetable-flatbread.jpg"
+  },
+  {
+    "id": "smoked-brisket-sandwich",
+    "name": "Smoked Brisket Sandwich",
+    "description": "12-hour smoked brisket, house pickles, calabrian chili aioli",
+    "price": 19,
+    "category": "handhelds",
+    "dietaryTags": ["spicy"],
+    "image": "/images/menu/smoked-brisket-sandwich.jpg"
+  },
+  {
+    "id": "truffle-fries",
+    "name": "Truffle Fries",
+    "description": "Hand-cut fries, truffle oil, parmesan, herb aioli",
+    "price": 10,
+    "category": "sides",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/truffle-fries.jpg"
+  },
+  {
+    "id": "charred-brussels-sprouts",
+    "name": "Charred Brussels Sprouts",
+    "description": "Chili glaze, toasted almonds, mint",
+    "price": 11,
+    "category": "sides",
+    "dietaryTags": ["vg", "gf", "spicy"],
+    "image": "/images/menu/charred-brussels-sprouts.jpg"
+  },
+  {
+    "id": "creamed-corn",
+    "name": "Creamed Corn",
+    "description": "Sweet corn, brown butter, cotija, chili crunch",
+    "price": 9,
+    "category": "sides",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/creamed-corn.jpg"
+  },
+  {
+    "id": "roasted-root-vegetables",
+    "name": "Roasted Root Vegetables",
+    "description": "Seasonal roots, whipped ricotta, sage brown butter",
+    "price": 10,
+    "category": "sides",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/roasted-root-vegetables.jpg"
+  },
+  {
+    "id": "brown-butter-skillet-cookie",
+    "name": "Brown Butter Skillet Cookie",
+    "description": "Warm chocolate chip skillet cookie, vanilla bean ice cream",
+    "price": 12,
+    "category": "desserts",
+    "dietaryTags": ["v"],
+    "image": "/images/menu/brown-butter-skillet-cookie.jpg",
+    "featured": true
+  },
+  {
+    "id": "burnt-basque-cheesecake",
+    "name": "Burnt Basque Cheesecake",
+    "description": "Caramelized crust, seasonal fruit compote",
+    "price": 11,
+    "category": "desserts",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/burnt-basque-cheesecake.jpg"
+  },
+  {
+    "id": "flourless-chocolate-torte",
+    "name": "Flourless Chocolate Torte",
+    "description": "Dark chocolate torte, espresso creme anglaise",
+    "price": 12,
+    "category": "desserts",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/flourless-chocolate-torte.jpg"
+  },
+  {
+    "id": "affogato",
+    "name": "Affogato",
+    "description": "Vanilla bean gelato, hot espresso, cocoa nib",
+    "price": 8,
+    "category": "desserts",
+    "dietaryTags": ["v", "gf"],
+    "image": "/images/menu/affogato.jpg"
+  },
+  {
+    "id": "smoked-old-fashioned",
+    "name": "Smoked Old Fashioned",
+    "description": "Bourbon, demerara, orange bitters, applewood smoke",
+    "price": 14,
+    "category": "drinks",
+    "image": "/images/menu/smoked-old-fashioned.jpg"
+  },
+  {
+    "id": "copper-fork-spritz",
+    "name": "Copper Fork Spritz",
+    "description": "Aperol, prosecco, soda, orange twist",
+    "price": 13,
+    "category": "drinks",
+    "image": "/images/menu/copper-fork-spritz.jpg"
+  },
+  {
+    "id": "house-red-blend",
+    "name": "House Red Blend",
+    "description": "Glass of our rotating small-producer red blend",
+    "price": 12,
+    "category": "drinks",
+    "dietaryTags": ["gf", "vg"],
+    "image": "/images/menu/house-red-blend.jpg"
+  },
+  {
+    "id": "local-draft-beer",
+    "name": "Local Draft Beer",
+    "description": "Rotating selection from regional Ohio breweries",
+    "price": 8,
+    "category": "drinks",
+    "image": "/images/menu/local-draft-beer.jpg"
+  },
+  {
+    "id": "sparkling-elderflower",
+    "name": "Sparkling Elderflower",
+    "description": "House-made elderflower soda, lime, mint",
+    "price": 6,
+    "category": "drinks",
+    "dietaryTags": ["vg", "gf", "df", "nf"],
+    "image": "/images/menu/sparkling-elderflower.jpg"
+  }
+]

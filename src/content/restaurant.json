@@ -1,0 +1,32 @@
+{
+  "name": "The Copper Fork",
+  "tagline": "Modern American, Locally Sourced",
+  "description": "The Copper Fork is a modern American bistro in Riverside, Ohio, built around seasonal, locally sourced ingredients and shareable plates. Since opening, we've kept the menu small, the sourcing close to home, and the dining room warm enough that a Tuesday night feels worth dressing up for.",
+  "phone": "(513) 555-0142",
+  "email": "hello@thecopperfork.example",
+  "address": {
+    "street": "482 Elm Street",
+    "city": "Riverside",
+    "state": "OH",
+    "zip": "45202",
+    "mapEmbedUrl": "https://www.google.com/maps?q=482+Elm+Street,+Riverside,+OH+45202&output=embed",
+    "directionsUrl": "https://www.google.com/maps/dir/?api=1&destination=482+Elm+Street,+Riverside,+OH+45202"
+  },
+  "hours": [
+    { "day": "Sunday", "open": "16:00", "close": "21:00", "closed": false },
+    { "day": "Monday", "open": null, "close": null, "closed": true },
+    { "day": "Tuesday", "open": "17:00", "close": "21:00", "closed": false },
+    { "day": "Wednesday", "open": "17:00", "close": "21:00", "closed": false },
+    { "day": "Thursday", "open": "17:00", "close": "21:00", "closed": false },
+    { "day": "Friday", "open": "17:00", "close": "22:00", "closed": false },
+    { "day": "Saturday", "open": "17:00", "close": "22:00", "closed": false }
+  ],
+  "social": {
+    "instagram": "https://www.instagram.com/thecopperfork",
+    "facebook": "https://www.facebook.com/thecopperfork"
+  },
+  "reservation": {
+    "widgetLabel": "Powered by TableReady",
+    "widgetUrl": "https://tableready.example/the-copper-fork"
+  }
+}

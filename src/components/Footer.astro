@@ -1,0 +1,82 @@
+---
+import { restaurant, phoneHref } from '../lib/restaurant';
+import { condensedHours } from '../lib/hours';
+
+const links = [
+  { href: '/', label: 'Home' },
+  { href: '/menu', label: 'Menu' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/reservations', label: 'Reservations' },
+  { href: '/contact', label: 'Contact' },
+  { href: '/about', label: 'About' },
+];
+
+const hours = condensedHours(restaurant.hours);
+---
+
+<footer class="bg-charcoal text-cream">
+  <div class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+    <div class="grid grid-cols-1 gap-12 sm:grid-cols-2 md:grid-cols-4">
+      <div>
+        <p class="font-display text-xl">{restaurant.name}</p>
+        <p class="mt-2 text-sm text-stone">{restaurant.tagline}</p>
+        <div class="mt-4 flex gap-4">
+          {restaurant.social.instagram && (
+            <a href={restaurant.social.instagram} aria-label="The Copper Fork on Instagram" class="text-cream hover:text-copper transition-colors">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <rect x="2" y="2" width="20" height="20" rx="5" />
+                <circle cx="12" cy="12" r="4" />
+                <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none" />
+              </svg>
+            </a>
+          )}
+          {restaurant.social.facebook && (
+            <a href={restaurant.social.facebook} aria-label="The Copper Fork on Facebook" class="text-cream hover:text-copper transition-colors">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M15 8h-2a2 2 0 0 0-2 2v10M9 14h5" />
+                <circle cx="12" cy="12" r="10" />
+              </svg>
+            </a>
+          )}
+        </div>
+      </div>
+
+      <nav aria-label="Footer">
+        <p class="uppercase-label text-sm text-stone">Explore</p>
+        <ul class="mt-4 space-y-2">
+          {links.map((link) => (
+            <li><a href={link.href} class="text-sm hover:text-copper transition-colors">{link.label}</a></li>
+          ))}
+        </ul>
+      </nav>
+
+      <div>
+        <p class="uppercase-label text-sm text-stone">Hours</p>
+        <ul class="mt-4 space-y-1 text-sm">
+          {hours.map((entry) => (
+            <li>{entry.days}: {entry.time}</li>
+          ))}
+        </ul>
+      </div>
+
+      <div>
+        <p class="uppercase-label text-sm text-stone">Find Us</p>
+        <a href="/contact" class="mt-4 block text-sm hover:text-copper transition-colors">
+          {restaurant.address.street}<br />
+          {restaurant.address.city}, {restaurant.address.state} {restaurant.address.zip}
+        </a>
+        <a href={phoneHref(restaurant.phone)} class="mt-2 block text-sm hover:text-copper transition-colors">{restaurant.phone}</a>
+      </div>
+    </div>
+
+    <div class="mt-16 flex flex-col gap-4 border-t border-cream/10 pt-8 text-xs text-stone sm:flex-row sm:items-center sm:justify-between">
+      <div class="flex gap-4">
+        <a href="/privacy" class="hover:text-copper transition-colors">Privacy Policy</a>
+        <a href="/privacy#terms" class="hover:text-copper transition-colors">Terms</a>
+      </div>
+      <p>
+        The Copper Fork is a fictional restaurant. This site is a portfolio demo built by a freelance developer &mdash; not a real business.
+      </p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,113 @@
+---
+import { Menu, X } from '@lucide/astro';
+
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+
+const links = [
+  { href: '/menu', label: 'Menu' },
+  { href: '/gallery', label: 'Gallery' },
+  { href: '/about', label: 'About' },
+  { href: '/contact', label: 'Contact' },
+];
+
+function isActive(href: string) {
+  return currentPath === href || (href !== '/' && currentPath.startsWith(href));
+}
+---
+
+<header class="sticky top-0 z-50 bg-charcoal text-cream">
+  <div class="mx-auto flex max-w-7xl items-center justify-between gap-4 px-6 py-4 md:px-8">
+    <a href="/" class="font-display text-xl shrink-0" aria-label="The Copper Fork, go to homepage">
+      The Copper Fork
+    </a>
+
+    <nav aria-label="Primary" class="hidden md:block">
+      <ul class="flex items-center gap-8">
+        {links.map((link) => (
+          <li>
+            <a
+              href={link.href}
+              class:list={[
+                'uppercase-label text-sm hover:text-copper transition-colors',
+                isActive(link.href) ? 'text-copper' : 'text-cream',
+              ]}
+              aria-current={isActive(link.href) ? 'page' : undefined}
+            >
+              {link.label}
+            </a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+
+    <a
+      href="/reservations"
+      class="hidden md:inline-flex items-center rounded-lg bg-copper px-6 py-3 text-sm font-medium text-cream hover:bg-copper-dark transition-colors min-h-11"
+    >
+      Reserve a Table
+    </a>
+
+    <button
+      type="button"
+      id="nav-toggle"
+      class="md:hidden flex h-11 w-11 items-center justify-center text-cream"
+      aria-label="Open menu"
+      aria-expanded="false"
+      aria-controls="mobile-nav"
+    >
+      <Menu id="nav-icon-open" class="h-6 w-6" aria-hidden="true" />
+      <X id="nav-icon-close" class="h-6 w-6 hidden" aria-hidden="true" />
+    </button>
+  </div>
+
+  <nav
+    id="mobile-nav"
+    aria-label="Mobile"
+    class="hidden md:hidden border-t border-cream/10 px-6 pb-6"
+  >
+    <ul class="flex flex-col gap-1 pt-4">
+      {links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class:list={[
+              'block py-3 uppercase-label text-sm min-h-11 flex items-center',
+              isActive(link.href) ? 'text-copper' : 'text-cream',
+            ]}
+            aria-current={isActive(link.href) ? 'page' : undefined}
+          >
+            {link.label}
+          </a>
+        </li>
+      ))}
+      <li class="pt-2">
+        <a
+          href="/reservations"
+          class="flex items-center justify-center rounded-lg bg-copper px-6 py-3 text-sm font-medium text-cream min-h-11"
+        >
+          Reserve a Table
+        </a>
+      </li>
+    </ul>
+  </nav>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle');
+  const mobileNav = document.getElementById('mobile-nav');
+  const iconOpen = document.getElementById('nav-icon-open');
+  const iconClose = document.getElementById('nav-icon-close');
+
+  toggle?.addEventListener('click', () => {
+    const isOpen = mobileNav?.classList.contains('hidden') === false;
+    mobileNav?.classList.toggle('hidden');
+    iconOpen?.classList.toggle('hidden');
+    iconClose?.classList.toggle('hidden');
+    toggle.setAttribute('aria-expanded', String(!isOpen));
+    toggle.setAttribute('aria-label', isOpen ? 'Open menu' : 'Close menu');
+  });
+</script>

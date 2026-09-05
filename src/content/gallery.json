@@ -1,0 +1,162 @@
+[
+  {
+    "id": "exterior-storefront",
+    "src": "/images/gallery/exterior-storefront.jpg",
+    "alt": "The Copper Fork storefront at dusk with warm light spilling from tall windows onto the sidewalk",
+    "category": "exterior",
+    "caption": "Our Elm Street storefront",
+    "featured": true
+  },
+  {
+    "id": "exterior-entrance",
+    "src": "/images/gallery/exterior-entrance.jpg",
+    "alt": "Restaurant entrance with a dark wood door and hanging pendant lights framed by brick facade",
+    "category": "exterior",
+    "caption": "The front entrance"
+  },
+  {
+    "id": "exterior-patio",
+    "src": "/images/gallery/exterior-patio.jpg",
+    "alt": "Outdoor sidewalk patio seating with string lights and small bistro tables in early evening light",
+    "category": "exterior",
+    "caption": "Sidewalk patio seating"
+  },
+  {
+    "id": "dining-room-01",
+    "src": "/images/gallery/dining-room-01.jpg",
+    "alt": "Warm-lit dining room with copper pendant lights and reclaimed wood tables",
+    "category": "interior",
+    "caption": "Our main dining room",
+    "featured": true
+  },
+  {
+    "id": "dining-room-02",
+    "src": "/images/gallery/dining-room-02.jpg",
+    "alt": "Second view of the dining room showing exposed brick wall and banquette seating",
+    "category": "interior",
+    "caption": "Banquette seating along the brick wall"
+  },
+  {
+    "id": "bar-area",
+    "src": "/images/gallery/bar-area.jpg",
+    "alt": "Bar area with backlit bottle shelving and warm brass fixtures above a dark wood bar top",
+    "category": "interior",
+    "caption": "The bar",
+    "featured": true
+  },
+  {
+    "id": "table-setting",
+    "src": "/images/gallery/table-setting.jpg",
+    "alt": "Close-up of a set table with linen napkin, copper flatware, and a small candle",
+    "category": "interior",
+    "caption": "A table set for dinner",
+    "featured": true
+  },
+  {
+    "id": "private-dining",
+    "src": "/images/gallery/private-dining.jpg",
+    "alt": "Small private dining nook with a round table and warm hanging light fixture",
+    "category": "interior",
+    "caption": "Our private dining nook"
+  },
+  {
+    "id": "open-kitchen",
+    "src": "/images/gallery/open-kitchen.jpg",
+    "alt": "Open kitchen pass with warm overhead lighting and stainless steel counters",
+    "category": "interior",
+    "caption": "The open kitchen pass"
+  },
+  {
+    "id": "food-scallops-plated",
+    "src": "/images/gallery/food-scallops-plated.jpg",
+    "alt": "Seared scallops plated with brown butter corn puree and a drizzle of chili oil on dark stoneware",
+    "category": "food",
+    "caption": "Seared scallops",
+    "featured": true
+  },
+  {
+    "id": "food-burger-plated",
+    "src": "/images/gallery/food-burger-plated.jpg",
+    "alt": "Dry-aged beef burger with aged cheddar and bacon jam on a brioche bun, served with fries",
+    "category": "food",
+    "caption": "The Copper Fork Burger",
+    "featured": true
+  },
+  {
+    "id": "food-short-rib-plated",
+    "src": "/images/gallery/food-short-rib-plated.jpg",
+    "alt": "Braised short rib over parmesan polenta with charred broccolini on a white plate",
+    "category": "food",
+    "caption": "Braised short rib"
+  },
+  {
+    "id": "food-skillet-cookie",
+    "src": "/images/gallery/food-skillet-cookie.jpg",
+    "alt": "Warm chocolate chip skillet cookie topped with melting vanilla bean ice cream",
+    "category": "food",
+    "caption": "Brown butter skillet cookie"
+  },
+  {
+    "id": "food-salad-plated",
+    "src": "/images/gallery/food-salad-plated.jpg",
+    "alt": "Little gem salad with shaved fennel, radish, and pecorino arranged on a ceramic plate",
+    "category": "food",
+    "caption": "Copper Fork Salad"
+  },
+  {
+    "id": "food-cocktail-old-fashioned",
+    "src": "/images/gallery/food-cocktail-old-fashioned.jpg",
+    "alt": "Smoked old fashioned cocktail in a rocks glass with a large ice cube and orange twist",
+    "category": "food",
+    "caption": "Smoked Old Fashioned"
+  },
+  {
+    "id": "food-charcuterie-board",
+    "src": "/images/gallery/food-charcuterie-board.jpg",
+    "alt": "Shared charcuterie board with cured meats, cheeses, and honeycomb on a wood board",
+    "category": "food",
+    "caption": "A shared starter board"
+  },
+  {
+    "id": "food-pasta-dish",
+    "src": "/images/gallery/food-pasta-dish.jpg",
+    "alt": "House-made cavatelli pasta tossed in brown butter and sage with roasted squash",
+    "category": "food",
+    "caption": "Cast iron cavatelli"
+  },
+  {
+    "id": "food-roasted-chicken",
+    "src": "/images/gallery/food-roasted-chicken.jpg",
+    "alt": "Roasted half chicken with herb butter and roasted root vegetables on a dark plate",
+    "category": "food",
+    "caption": "Roasted half chicken"
+  },
+  {
+    "id": "food-dessert-plate",
+    "src": "/images/gallery/food-dessert-plate.jpg",
+    "alt": "Slice of burnt Basque cheesecake with seasonal fruit compote on a small plate",
+    "category": "food",
+    "caption": "Burnt Basque cheesecake"
+  },
+  {
+    "id": "team-chef-plating",
+    "src": "/images/gallery/team-chef-plating.jpg",
+    "alt": "Chef in whites carefully plating a dish in the kitchen under warm light",
+    "category": "team",
+    "caption": "In the kitchen"
+  },
+  {
+    "id": "team-bartender-mixing",
+    "src": "/images/gallery/team-bartender-mixing.jpg",
+    "alt": "Bartender mixing a cocktail behind the bar with bottles lit warmly in the background",
+    "category": "team",
+    "caption": "Behind the bar"
+  },
+  {
+    "id": "team-server-table",
+    "src": "/images/gallery/team-server-table.jpg",
+    "alt": "Server setting down a plate at a table in the warmly lit dining room",
+    "category": "team",
+    "caption": "Table service"
+  }
+]
