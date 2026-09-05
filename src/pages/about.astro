@@ -1,0 +1,75 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import CtaBand from '../components/CtaBand.astro';
+
+const values = [
+  { title: 'Locally Sourced', body: "Produce, dairy, and meat from farms within a couple hours of Riverside — we know most of our purveyors by name." },
+  { title: 'Seasonal Menu', body: 'The menu shifts with what’s actually good right now, not a fixed year-round list.' },
+  { title: 'Made In-House', body: 'Bread, pasta, pickles, and stocks are made from scratch in our own kitchen, most days.' },
+];
+---
+
+<BaseLayout title="About" description="The story behind The Copper Fork, our sourcing philosophy, and the people running the kitchen.">
+  <section class="mx-auto max-w-3xl px-6 pt-16 pb-8 md:px-8 md:pt-24">
+    <h1 class="text-4xl md:text-[56px]">Our Story</h1>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-6 pb-16 md:px-8">
+    <div class="space-y-5 text-lg md:text-[20px] text-charcoal/80">
+      <p>
+        The Copper Fork opened on Elm Street with a simple idea: a neighborhood restaurant that takes food seriously
+        without taking itself too seriously. No tasting menus, no pretense &mdash; just a small, seasonal menu built
+        around what the region's farms are actually growing, cooked with technique and served without ceremony.
+      </p>
+      <p>
+        Almost everything on the menu starts with a relationship &mdash; a produce farm outside Riverside, a small
+        dairy upstate, a butcher we've worked with since the doors opened. When a crop comes in early or a
+        supplier has something unexpected, the kitchen adjusts. That's why the menu rotates through the seasons
+        instead of staying fixed all year.
+      </p>
+      <p>
+        The dining room was designed the same way the food is cooked: warm, unfussy, built to feel more like a
+        well-loved kitchen than a formal dining room. Copper fixtures, reclaimed wood, low light &mdash; a room
+        meant for a Tuesday dinner as much as a celebration.
+      </p>
+    </div>
+  </section>
+
+  <section class="bg-warm-white py-16 md:py-24">
+    <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2 md:px-8">
+      <img
+        src="/images/brand/chef-portrait.jpg"
+        alt="Chef in a white chef coat standing in the kitchen, arms crossed, under warm overhead light"
+        width="800"
+        height="1000"
+        loading="lazy"
+        decoding="async"
+        class="aspect-[4/5] w-full rounded-xl object-cover photo-warm-grade"
+      />
+      <div>
+        <p class="uppercase-label text-sm text-copper">From the Kitchen</p>
+        <h2 class="mt-2 text-2xl md:text-[36px]">A Note From Our Chef</h2>
+        <p class="mt-4 text-charcoal/80">
+          &ldquo;We don't chase trends here. We cook what's in season, we source as close to home as we can, and we
+          try to make every plate feel like it took some care &mdash; because it did. If you leave full and a
+          little warmer than when you walked in, we did our job.&rdquo;
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-5xl px-6 py-16 md:px-8 md:py-24">
+    <h2 class="text-2xl md:text-[36px]">What Matters to Us</h2>
+    <div class="mt-8 grid grid-cols-1 gap-6 sm:grid-cols-3">
+      {values.map((value) => (
+        <div class="rounded-xl border border-stone/30 bg-warm-white p-6">
+          <h3 class="text-xl font-display">{value.title}</h3>
+          <p class="mt-2 text-sm text-charcoal/80">{value.body}</p>
+        </div>
+      ))}
+    </div>
+    <a href="/menu" class="mt-8 inline-block text-copper hover:underline">See what's on the menu &rarr;</a>
+  </section>
+
+  <CtaBand />
+</BaseLayout>

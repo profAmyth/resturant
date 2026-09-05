@@ -11,7 +11,7 @@ interface Props {
   ogImage?: string;
 }
 
-const { title, description = restaurant.description, ogImage = '/images/brand/og-image.jpg' } = Astro.props;
+const { title, description = restaurant.description, ogImage = '/images/gallery/exterior-storefront.jpg' } = Astro.props;
 const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
 ---
 
