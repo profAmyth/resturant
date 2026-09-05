@@ -1,4 +1,6 @@
 ---
+import { thumbSrc } from '../lib/images';
+
 interface Photo {
   id: string;
   src: string;
@@ -25,7 +27,7 @@ const { photos, startIndex = 0 } = Astro.props;
       aria-label={`Open enlarged photo: ${photo.caption ?? photo.alt}`}
     >
       <img
-        src={photo.src}
+        src={thumbSrc(photo.src)}
         alt={photo.alt}
         width="600"
         height="750"

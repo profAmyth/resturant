@@ -6,6 +6,7 @@ import MenuItemCard from '../components/MenuItemCard.astro';
 import CtaBand from '../components/CtaBand.astro';
 import { restaurant } from '../lib/restaurant';
 import { condensedHours } from '../lib/hours';
+import { thumbSrc } from '../lib/images';
 
 const menu = await getCollection('menu');
 const featuredDishes = menu.filter((item) => item.data.featured && item.data.available !== false);
@@ -17,7 +18,7 @@ const hours = condensedHours(restaurant.hours);
 ---
 
 <BaseLayout title="Home">
-  <Hero image="/images/gallery/exterior-storefront.jpg" imageAlt="The Copper Fork storefront at dusk with warm light spilling onto the sidewalk" />
+  <Hero image="/images/gallery/exterior-patio.webp" imageAlt="Outdoor patio seating beneath umbrellas with warm lamplight on each table at dusk" />
 
   <section class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
     <div class="max-w-2xl">
@@ -57,7 +58,7 @@ const hours = condensedHours(restaurant.hours);
     <div class="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3">
       {featuredPhotos.map((photo) => (
         <img
-          src={photo.data.src}
+          src={thumbSrc(photo.data.src)}
           alt={photo.data.alt}
           width="600"
           height="750"

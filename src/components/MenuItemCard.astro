@@ -1,5 +1,6 @@
 ---
 import DietaryBadge from './DietaryBadge.astro';
+import { thumbSrc } from '../lib/images';
 
 interface Props {
   name: string;
@@ -11,7 +12,7 @@ interface Props {
 }
 
 const { name, description, price, category, dietaryTags = [], image } = Astro.props;
-const imageSrc = image ?? `/images/menu/placeholder-${category}.svg`;
+const imageSrc = image ? thumbSrc(image) : `/images/menu/placeholder-${category}.svg`;
 ---
 
 <article class="flex gap-4 rounded-xl border border-stone/30 bg-warm-white p-6">

@@ -6,7 +6,7 @@
     "price": 19,
     "category": "starters",
     "dietaryTags": ["gf"],
-    "image": "/images/gallery/food-scallops-plated.jpg",
+    "image": "/images/gallery/food-scallops-plated.webp",
     "featured": true
   },
   {
@@ -41,7 +41,7 @@
     "price": 13,
     "category": "salads",
     "dietaryTags": ["v", "gf"],
-    "image": "/images/gallery/food-salad-plated.jpg"
+    "image": "/images/gallery/food-salad-plated.webp"
   },
   {
     "id": "roasted-beet-salad",
@@ -65,7 +65,7 @@
     "price": 32,
     "category": "mains",
     "dietaryTags": ["gf"],
-    "image": "/images/gallery/food-short-rib-plated.jpg",
+    "image": "/images/gallery/food-short-rib-plated.webp",
     "featured": true
   },
   {
@@ -99,7 +99,7 @@
     "price": 26,
     "category": "mains",
     "dietaryTags": ["gf", "df"],
-    "image": "/images/gallery/food-roasted-chicken.jpg"
+    "image": "/images/gallery/food-roasted-chicken.webp"
   },
   {
     "id": "cast-iron-cavatelli",
@@ -108,7 +108,7 @@
     "price": 23,
     "category": "mains",
     "dietaryTags": ["v"],
-    "image": "/images/gallery/food-pasta-dish.jpg"
+    "image": "/images/gallery/food-pasta-dish.webp"
   },
   {
     "id": "copper-fork-burger",
@@ -116,7 +116,7 @@
     "description": "Dry-aged beef, aged cheddar, bacon jam, brioche bun",
     "price": 18,
     "category": "handhelds",
-    "image": "/images/gallery/food-burger-plated.jpg",
+    "image": "/images/gallery/food-burger-plated.webp",
     "featured": true
   },
   {
@@ -181,7 +181,7 @@
     "price": 12,
     "category": "desserts",
     "dietaryTags": ["v"],
-    "image": "/images/gallery/food-skillet-cookie.jpg",
+    "image": "/images/gallery/food-skillet-cookie.webp",
     "featured": true
   },
   {
@@ -191,7 +191,7 @@
     "price": 11,
     "category": "desserts",
     "dietaryTags": ["v", "gf"],
-    "image": "/images/gallery/food-dessert-plate.jpg"
+    "image": "/images/gallery/food-dessert-plate.webp"
   },
   {
     "id": "flourless-chocolate-torte",
@@ -215,7 +215,7 @@
     "description": "Bourbon, demerara, orange bitters, applewood smoke",
     "price": 14,
     "category": "drinks",
-    "image": "/images/gallery/food-cocktail-old-fashioned.jpg"
+    "image": "/images/gallery/food-cocktail-old-fashioned.webp"
   },
   {
     "id": "copper-fork-spritz",

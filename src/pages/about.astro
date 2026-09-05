@@ -1,6 +1,7 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import CtaBand from '../components/CtaBand.astro';
+import { thumbSrc } from '../lib/images';
 
 const values = [
   { title: 'Locally Sourced', body: "Produce, dairy, and meat from farms within a couple hours of Riverside — we know most of our purveyors by name." },
@@ -38,8 +39,8 @@ const values = [
   <section class="bg-warm-white py-16 md:py-24">
     <div class="mx-auto grid max-w-5xl grid-cols-1 items-center gap-10 px-6 md:grid-cols-2 md:px-8">
       <img
-        src="/images/brand/chef-portrait.jpg"
-        alt="Chef in a white chef coat standing in the kitchen, arms crossed, under warm overhead light"
+        src={thumbSrc('/images/brand/chef-portrait.webp')}
+        alt="Chef in an apron prepping ingredients at a kitchen counter, hanging pots and knives in the background"
         width="800"
         height="1000"
         loading="lazy"
