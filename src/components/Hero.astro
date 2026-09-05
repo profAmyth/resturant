@@ -25,10 +25,10 @@ const { image, imageAlt } = Astro.props;
     <h1 class="text-4xl md:text-[56px]">{restaurant.name}</h1>
     <p class="mt-3 text-lg md:text-[20px] text-cream/90">{restaurant.tagline}</p>
     <div class="mt-8 flex flex-wrap gap-4">
-      <a href="/menu" class="inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium text-cream hover:bg-cream hover:text-charcoal transition-colors">
+      <a href="/menu" class="btn-press inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium text-cream hover:bg-cream hover:text-charcoal transition-colors">
         View Menu
       </a>
-      <a href="/reservations" class="inline-flex min-h-11 items-center rounded-lg bg-copper-dark px-6 py-3 font-medium text-cream hover:bg-copper transition-colors">
+      <a href="/reservations" class="btn-press inline-flex min-h-11 items-center rounded-lg bg-copper-dark px-6 py-3 font-medium text-cream hover:bg-copper transition-colors">
         Reserve a Table
       </a>
     </div>

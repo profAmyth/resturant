@@ -64,7 +64,7 @@ const hours = condensedHours(restaurant.hours);
           height="750"
           loading="lazy"
           decoding="async"
-          class="aspect-[4/5] w-full rounded-lg object-cover photo-warm-grade"
+          class="aspect-[4/5] w-full rounded-lg object-cover photo-warm-grade transition-transform duration-150 ease-out hover:scale-[1.03] active:scale-[0.98]"
         />
       ))}
     </div>
@@ -90,7 +90,7 @@ const hours = condensedHours(restaurant.hours);
           {restaurant.address.street}<br />
           {restaurant.address.city}, {restaurant.address.state} {restaurant.address.zip}
         </p>
-        <a href={restaurant.address.directionsUrl} class="mt-4 inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium hover:bg-cream hover:text-charcoal transition-colors">
+        <a href={restaurant.address.directionsUrl} class="btn-press mt-4 inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium hover:bg-cream hover:text-charcoal transition-colors">
           Get Directions
         </a>
       </div>

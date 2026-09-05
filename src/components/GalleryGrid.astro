@@ -35,7 +35,7 @@ const { photos, startIndex = 0, eagerCount = 0 } = Astro.props;
         loading={index < eagerCount ? 'eager' : 'lazy'}
         fetchpriority={index < eagerCount ? 'high' : undefined}
         decoding="async"
-        class="aspect-[4/5] w-full object-cover photo-warm-grade transition-transform duration-300 group-hover:scale-[1.03]"
+        class="aspect-[4/5] w-full object-cover photo-warm-grade transition-transform duration-300 group-hover:scale-[1.03] group-active:scale-[0.98]"
       />
       {photo.caption && (
         <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 to-transparent p-3 text-sm text-cream opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">

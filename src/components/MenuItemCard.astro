@@ -17,7 +17,7 @@ const imageSrc = image ? thumbSrc(image) : `/images/menu/placeholder-${category}
 const imageAlt = image ? `${name}, plated` : '';
 ---
 
-<article class="flex gap-4 rounded-xl border border-stone/30 bg-warm-white p-6">
+<article class="card-press flex gap-4 rounded-xl border border-stone/30 bg-warm-white p-6">
   <img
     src={imageSrc}
     alt={imageAlt}

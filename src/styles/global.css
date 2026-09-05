@@ -58,3 +58,42 @@ h1, h2, h3, h4 {
 .photo-warm-grade {
   filter: saturate(1.05) sepia(0.06);
 }
+
+/* Tactile feedback for buttons: lift + shadow on hover, press down on click. */
+.btn-press {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+}
+.btn-press:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px -4px rgb(42 38 34 / 0.25);
+}
+.btn-press:active {
+  transform: translateY(0) scale(0.96);
+  box-shadow: none;
+}
+
+/* Tactile feedback for cards: lift on hover, settle on click. */
+.card-press {
+  transition: transform 150ms ease-out, box-shadow 150ms ease-out;
+}
+.card-press:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -8px rgb(42 38 34 / 0.18);
+}
+.card-press:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .btn-press,
+  .card-press {
+    transition: none;
+  }
+  .btn-press:hover,
+  .btn-press:active,
+  .card-press:hover,
+  .card-press:active {
+    transform: none;
+    box-shadow: none;
+  }
+}
