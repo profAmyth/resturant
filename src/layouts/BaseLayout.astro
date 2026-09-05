@@ -1,6 +1,7 @@
 ---
 import Nav from '../components/Nav.astro';
 import Footer from '../components/Footer.astro';
+import MobileReserveBar from '../components/MobileReserveBar.astro';
 import { restaurant } from '../lib/restaurant';
 import '../styles/global.css';
 
@@ -42,5 +43,6 @@ const canonicalUrl = new URL(Astro.url.pathname, Astro.site);
       <slot />
     </main>
     <Footer />
+    <MobileReserveBar currentPath={Astro.url.pathname} />
   </body>
 </html>

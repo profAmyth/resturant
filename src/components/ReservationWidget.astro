@@ -1,0 +1,102 @@
+---
+import { restaurant } from '../lib/restaurant';
+
+const timeSlots = ['5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 PM', '8:00 PM', '8:30 PM', '9:00 PM'];
+---
+
+<div class="rounded-xl border border-stone/30 bg-warm-white p-6 md:p-8">
+  <p class="uppercase-label text-sm text-stone">{restaurant.reservation.widgetLabel}</p>
+
+  <form id="reservation-form" class="mt-4 space-y-6">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      <div>
+        <label for="res-date" class="block text-sm font-medium text-charcoal">Date</label>
+        <input
+          type="date"
+          id="res-date"
+          name="date"
+          required
+          class="mt-1 block w-full min-h-11 rounded-lg border border-stone/40 bg-cream px-3 py-2 text-charcoal"
+        />
+      </div>
+      <div>
+        <label for="res-party-size" class="block text-sm font-medium text-charcoal">Party Size</label>
+        <select
+          id="res-party-size"
+          name="partySize"
+          required
+          class="mt-1 block w-full min-h-11 rounded-lg border border-stone/40 bg-cream px-3 py-2 text-charcoal"
+        >
+          {Array.from({ length: 8 }, (_, i) => i + 1).map((n) => (
+            <option value={n}>{n} {n === 1 ? 'guest' : 'guests'}</option>
+          ))}
+        </select>
+      </div>
+    </div>
+
+    <fieldset>
+      <legend class="text-sm font-medium text-charcoal">Time</legend>
+      <div class="mt-2 grid grid-cols-3 gap-2 sm:grid-cols-5">
+        {timeSlots.map((time, index) => (
+          <label class="relative">
+            <input
+              type="radio"
+              name="time"
+              value={time}
+              required
+              class="peer sr-only"
+              checked={index === 2}
+            />
+            <span class="flex min-h-11 items-center justify-center rounded-lg border border-stone/40 px-2 text-sm text-charcoal peer-checked:border-copper peer-checked:bg-copper peer-checked:text-cream peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-copper">
+              {time}
+            </span>
+          </label>
+        ))}
+      </div>
+    </fieldset>
+
+    <button
+      type="submit"
+      class="flex min-h-11 w-full items-center justify-center rounded-lg bg-copper px-6 py-3 font-medium text-cream hover:bg-copper-dark transition-colors"
+    >
+      Find a Table
+    </button>
+  </form>
+
+  <div id="reservation-confirmation" class="hidden text-center">
+    <svg class="mx-auto h-10 w-10 text-sage" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M20 6 9 17l-5-5" />
+    </svg>
+    <p class="mt-4 text-xl font-display">Request received</p>
+    <p class="mt-2 text-charcoal/80">
+      Thanks! In a live deployment, this would be submitted to {restaurant.reservation.widgetLabel.replace('Powered by ', '')}&rsquo;s booking system for confirmation.
+    </p>
+    <button
+      type="button"
+      id="reservation-reset"
+      class="mt-6 inline-flex min-h-11 items-center rounded-lg border border-charcoal px-6 py-3 font-medium text-charcoal hover:bg-charcoal hover:text-cream transition-colors"
+    >
+      Make Another Reservation
+    </button>
+  </div>
+</div>
+
+<script>
+  const form = document.getElementById('reservation-form');
+  const confirmation = document.getElementById('reservation-confirmation');
+  const resetBtn = document.getElementById('reservation-reset');
+
+  form?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    form.classList.add('hidden');
+    confirmation?.classList.remove('hidden');
+    confirmation?.setAttribute('tabindex', '-1');
+    (confirmation as HTMLElement | null)?.focus();
+  });
+
+  resetBtn?.addEventListener('click', () => {
+    (form as HTMLFormElement | null)?.reset();
+    confirmation?.classList.add('hidden');
+    form?.classList.remove('hidden');
+  });
+</script>

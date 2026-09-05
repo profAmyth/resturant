@@ -1,0 +1,41 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import ReservationWidget from '../components/ReservationWidget.astro';
+import { restaurant, phoneHref } from '../lib/restaurant';
+import { condensedHours } from '../lib/hours';
+
+const hours = condensedHours(restaurant.hours);
+---
+
+<BaseLayout title="Reservations" description="Reserve a table at The Copper Fork — pick a date, party size, and time.">
+  <section class="mx-auto max-w-3xl px-6 pt-16 pb-8 md:px-8 md:pt-24">
+    <h1 class="text-4xl md:text-[56px]">Reservations</h1>
+    <p class="mt-3 text-lg md:text-[20px] text-charcoal/80">
+      Pick a date, party size, and time below. We hold tables for 15 minutes past the reservation time.
+    </p>
+  </section>
+
+  <section class="mx-auto max-w-3xl px-6 pb-16 md:px-8">
+    <ReservationWidget />
+
+    <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
+      <div>
+        <h2 class="text-xl font-display">Prefer to call?</h2>
+        <a href={phoneHref(restaurant.phone)} class="mt-2 inline-block text-copper hover:underline">{restaurant.phone}</a>
+        <p class="mt-2 text-sm text-stone">We take phone reservations during service hours:</p>
+        <ul class="mt-1 space-y-0.5 text-sm text-charcoal/80">
+          {hours.filter((entry) => entry.time !== 'Closed').map((entry) => (
+            <li>{entry.days}: {entry.time}</li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-xl font-display">Large parties &amp; private events</h2>
+        <p class="mt-2 text-sm text-charcoal/80">
+          Planning something for 8 or more guests? We'd love to help you set it up.
+        </p>
+        <a href="/contact" class="mt-2 inline-block text-copper hover:underline">Get in touch &rarr;</a>
+      </div>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,43 @@
+---
+interface Photo {
+  id: string;
+  src: string;
+  alt: string;
+  category: string;
+  caption?: string;
+}
+
+interface Props {
+  photos: Photo[];
+  startIndex?: number;
+}
+
+const { photos, startIndex = 0 } = Astro.props;
+---
+
+<div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+  {photos.map((photo, index) => (
+    <button
+      type="button"
+      class="group relative block overflow-hidden rounded-lg text-left"
+      data-lightbox-trigger
+      data-index={startIndex + index}
+      aria-label={`Open enlarged photo: ${photo.caption ?? photo.alt}`}
+    >
+      <img
+        src={photo.src}
+        alt={photo.alt}
+        width="600"
+        height="750"
+        loading="lazy"
+        decoding="async"
+        class="aspect-[4/5] w-full object-cover photo-warm-grade transition-transform duration-300 group-hover:scale-[1.03]"
+      />
+      {photo.caption && (
+        <span class="absolute inset-x-0 bottom-0 bg-gradient-to-t from-charcoal/80 to-transparent p-3 text-sm text-cream opacity-100 transition-opacity md:opacity-0 md:group-hover:opacity-100">
+          {photo.caption}
+        </span>
+      )}
+    </button>
+  ))}
+</div>

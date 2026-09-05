@@ -1,0 +1,18 @@
+---
+interface Props {
+  currentPath: string;
+}
+
+const { currentPath } = Astro.props;
+---
+
+{currentPath !== '/reservations' && (
+  <div class="fixed inset-x-0 bottom-0 z-40 border-t border-charcoal/10 bg-cream p-3 md:hidden">
+    <a
+      href="/reservations"
+      class="flex min-h-11 items-center justify-center rounded-lg bg-copper px-6 py-3 font-medium text-cream hover:bg-copper-dark transition-colors"
+    >
+      Reserve a Table
+    </a>
+  </div>
+)}
