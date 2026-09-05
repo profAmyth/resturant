@@ -69,9 +69,10 @@
   {
     "id": "food-scallops-plated",
     "src": "/images/gallery/food-scallops-plated.jpg",
-    "alt": "Seared scallops plated with brown butter corn puree and a drizzle of chili oil on dark stoneware",
+    "alt": "Seared scallop with a golden-yellow beurre blanc and microgreens on a white plate",
     "category": "food",
     "caption": "Seared scallops",
+    "credit": "Photo: Unsplash / Chefitt",
     "featured": true
   },
   {
@@ -80,63 +81,72 @@
     "alt": "Dry-aged beef burger with aged cheddar and bacon jam on a brioche bun, served with fries",
     "category": "food",
     "caption": "The Copper Fork Burger",
+    "credit": "Photo: Unsplash / Jonathan Borba",
     "featured": true
   },
   {
     "id": "food-short-rib-plated",
     "src": "/images/gallery/food-short-rib-plated.jpg",
-    "alt": "Braised short rib over parmesan polenta with charred broccolini on a white plate",
+    "alt": "Braised short rib with a creamy white puree, broccoli, and fresh herbs on a gold-rimmed plate",
     "category": "food",
-    "caption": "Braised short rib"
+    "caption": "Braised short rib",
+    "credit": "Photo: Unsplash / yoseph hailu"
   },
   {
     "id": "food-skillet-cookie",
     "src": "/images/gallery/food-skillet-cookie.jpg",
     "alt": "Warm chocolate chip skillet cookie topped with melting vanilla bean ice cream",
     "category": "food",
-    "caption": "Brown butter skillet cookie"
+    "caption": "Brown butter skillet cookie",
+    "credit": "Photo: Pexels / Zehra Yilmaz"
   },
   {
     "id": "food-salad-plated",
     "src": "/images/gallery/food-salad-plated.jpg",
-    "alt": "Little gem salad with shaved fennel, radish, and pecorino arranged on a ceramic plate",
+    "alt": "Arugula salad with pickled red onion and shaved cheese, finished with a balsamic drizzle",
     "category": "food",
-    "caption": "Copper Fork Salad"
+    "caption": "Copper Fork Salad",
+    "credit": "Photo: Unsplash / Gaia&Co"
   },
   {
     "id": "food-cocktail-old-fashioned",
     "src": "/images/gallery/food-cocktail-old-fashioned.jpg",
     "alt": "Smoked old fashioned cocktail in a rocks glass with a large ice cube and orange twist",
     "category": "food",
-    "caption": "Smoked Old Fashioned"
+    "caption": "Smoked Old Fashioned",
+    "credit": "Photo: Unsplash / Adam Jaime"
   },
   {
     "id": "food-charcuterie-board",
     "src": "/images/gallery/food-charcuterie-board.jpg",
     "alt": "Shared charcuterie board with cured meats, cheeses, and honeycomb on a wood board",
     "category": "food",
-    "caption": "A shared starter board"
+    "caption": "A shared starter board",
+    "credit": "Photo: Unsplash / Ana Maltez"
   },
   {
     "id": "food-pasta-dish",
     "src": "/images/gallery/food-pasta-dish.jpg",
     "alt": "House-made cavatelli pasta tossed in brown butter and sage with roasted squash",
     "category": "food",
-    "caption": "Cast iron cavatelli"
+    "caption": "Cast iron cavatelli",
+    "credit": "Photo: Unsplash / Eaters Collective"
   },
   {
     "id": "food-roasted-chicken",
     "src": "/images/gallery/food-roasted-chicken.jpg",
     "alt": "Roasted half chicken with herb butter and roasted root vegetables on a dark plate",
     "category": "food",
-    "caption": "Roasted half chicken"
+    "caption": "Roasted half chicken",
+    "credit": "Photo: Unsplash / Chefitt"
   },
   {
     "id": "food-dessert-plate",
     "src": "/images/gallery/food-dessert-plate.jpg",
     "alt": "Slice of burnt Basque cheesecake with seasonal fruit compote on a small plate",
     "category": "food",
-    "caption": "Burnt Basque cheesecake"
+    "caption": "Burnt Basque cheesecake",
+    "credit": "Photo: Unsplash / Kelsey Todd"
   },
   {
     "id": "team-chef-plating",
