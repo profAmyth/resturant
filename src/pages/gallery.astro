@@ -27,11 +27,12 @@ const sections = GALLERY_CATEGORY_ORDER.map((category) => {
   </section>
 
   <div class="mx-auto max-w-7xl px-6 pb-16 md:px-8">
-    {sections.map((section) => (
+    {sections.map((section, sectionIndex) => (
       <section class="py-8">
         <h2 class="text-2xl md:text-[36px] mb-6">{section.label}</h2>
         <GalleryGrid
           startIndex={section.startIndex}
+          eagerCount={sectionIndex === 0 ? 3 : 0}
           photos={section.photos.map((photo) => ({
             id: photo.id,
             src: photo.data.src,

@@ -15,7 +15,7 @@ const { photos } = Astro.props;
 ---
 
 <dialog id="lightbox" class="m-auto max-h-none max-w-none overflow-hidden bg-transparent p-0 backdrop:bg-charcoal/95">
-  <div class="relative flex h-screen w-screen items-center justify-center p-4">
+  <div id="lightbox-backdrop" class="relative flex h-screen w-screen items-center justify-center p-4">
     <button id="lightbox-close" type="button" class="absolute right-4 top-4 flex h-11 w-11 items-center justify-center rounded-full bg-charcoal/60 text-cream hover:bg-charcoal" aria-label="Close">
       <X class="h-6 w-6" aria-hidden="true" />
     </button>
@@ -83,8 +83,9 @@ const { photos } = Astro.props;
   nextBtn?.addEventListener('click', next);
   prevBtn?.addEventListener('click', prev);
 
-  dialog.addEventListener('click', (event) => {
-    if (event.target === dialog) dialog.close();
+  const backdrop = document.getElementById('lightbox-backdrop');
+  backdrop?.addEventListener('click', (event) => {
+    if (event.target === backdrop) dialog.close();
   });
 
   dialog.addEventListener('keydown', (event) => {

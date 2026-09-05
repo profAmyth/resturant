@@ -9,19 +9,22 @@ interface Props {
   category: string;
   dietaryTags?: string[];
   image?: string;
+  eager?: boolean;
 }
 
-const { name, description, price, category, dietaryTags = [], image } = Astro.props;
+const { name, description, price, category, dietaryTags = [], image, eager = false } = Astro.props;
 const imageSrc = image ? thumbSrc(image) : `/images/menu/placeholder-${category}.svg`;
+const imageAlt = image ? `${name}, plated` : '';
 ---
 
 <article class="flex gap-4 rounded-xl border border-stone/30 bg-warm-white p-6">
   <img
     src={imageSrc}
-    alt=""
+    alt={imageAlt}
     width="96"
     height="96"
-    loading="lazy"
+    loading={eager ? 'eager' : 'lazy'}
+    fetchpriority={eager ? 'high' : undefined}
     decoding="async"
     class="h-24 w-24 shrink-0 rounded-lg object-cover photo-warm-grade"
   />
