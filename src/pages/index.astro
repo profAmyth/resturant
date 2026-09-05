@@ -1,7 +1,100 @@
 ---
+import { getCollection } from 'astro:content';
 import BaseLayout from '../layouts/BaseLayout.astro';
+import Hero from '../components/Hero.astro';
+import MenuItemCard from '../components/MenuItemCard.astro';
+import CtaBand from '../components/CtaBand.astro';
+import { restaurant } from '../lib/restaurant';
+import { condensedHours } from '../lib/hours';
+
+const menu = await getCollection('menu');
+const featuredDishes = menu.filter((item) => item.data.featured && item.data.available !== false);
+
+const gallery = await getCollection('gallery');
+const featuredPhotos = gallery.filter((photo) => photo.data.featured).slice(0, 6);
+
+const hours = condensedHours(restaurant.hours);
 ---
 
 <BaseLayout title="Home">
-  <p class="p-8">Home page content coming in Step 5.</p>
+  <Hero image="/images/gallery/exterior-storefront.jpg" imageAlt="The Copper Fork storefront at dusk with warm light spilling onto the sidewalk" />
+
+  <section class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+    <div class="max-w-2xl">
+      <p class="uppercase-label text-sm text-copper">Our Story</p>
+      <p class="mt-3 text-2xl md:text-[36px] font-display">{restaurant.description.split('. ').slice(0, 2).join('. ')}.</p>
+      <a href="/about" class="mt-4 inline-block text-copper hover:underline">Read our story &rarr;</a>
+    </div>
+  </section>
+
+  <section class="bg-warm-white py-16 md:py-24">
+    <div class="mx-auto max-w-7xl px-6 md:px-8">
+      <div class="flex items-end justify-between gap-4">
+        <h2 class="text-2xl md:text-[36px]">Featured Dishes</h2>
+        <a href="/menu" class="hidden text-copper hover:underline sm:inline-block">Full menu &rarr;</a>
+      </div>
+      <div class="mt-8 grid grid-cols-1 gap-4 md:grid-cols-2">
+        {featuredDishes.map((item) => (
+          <MenuItemCard
+            name={item.data.name}
+            description={item.data.description}
+            price={item.data.price}
+            category={item.data.category}
+            dietaryTags={item.data.dietaryTags}
+            image={item.data.image}
+          />
+        ))}
+      </div>
+      <a href="/menu" class="mt-6 inline-block text-copper hover:underline sm:hidden">Full menu &rarr;</a>
+    </div>
+  </section>
+
+  <section class="mx-auto max-w-7xl px-6 py-16 md:px-8 md:py-24">
+    <div class="flex items-end justify-between gap-4">
+      <h2 class="text-2xl md:text-[36px]">A Taste of the Room</h2>
+      <a href="/gallery" class="hidden text-copper hover:underline sm:inline-block">Full gallery &rarr;</a>
+    </div>
+    <div class="mt-8 grid grid-cols-2 gap-3 md:grid-cols-3">
+      {featuredPhotos.map((photo) => (
+        <img
+          src={photo.data.src}
+          alt={photo.data.alt}
+          width="600"
+          height="750"
+          loading="lazy"
+          decoding="async"
+          class="aspect-[4/5] w-full rounded-lg object-cover photo-warm-grade"
+        />
+      ))}
+    </div>
+    <a href="/gallery" class="mt-6 inline-block text-copper hover:underline sm:hidden">Full gallery &rarr;</a>
+  </section>
+
+  <section class="bg-charcoal text-cream">
+    <div class="mx-auto grid max-w-7xl grid-cols-1 gap-8 px-6 py-16 md:grid-cols-2 md:px-8 md:py-24">
+      <div>
+        <h2 class="text-2xl md:text-[36px]">Hours</h2>
+        <ul class="mt-4 space-y-1 text-cream/90">
+          {hours.map((entry) => (
+            <li class="flex justify-between max-w-xs">
+              <span>{entry.days}</span>
+              <span>{entry.time}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+      <div>
+        <h2 class="text-2xl md:text-[36px]">Location</h2>
+        <p class="mt-4 text-cream/90">
+          {restaurant.address.street}<br />
+          {restaurant.address.city}, {restaurant.address.state} {restaurant.address.zip}
+        </p>
+        <a href={restaurant.address.directionsUrl} class="mt-4 inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium hover:bg-cream hover:text-charcoal transition-colors">
+          Get Directions
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <CtaBand />
 </BaseLayout>

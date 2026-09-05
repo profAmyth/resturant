@@ -1,0 +1,36 @@
+---
+import { restaurant } from '../lib/restaurant';
+
+interface Props {
+  image: string;
+  imageAlt: string;
+}
+
+const { image, imageAlt } = Astro.props;
+---
+
+<section class="relative flex h-[85vh] min-h-[520px] items-end overflow-hidden bg-charcoal md:h-[90vh]">
+  <img
+    src={image}
+    alt={imageAlt}
+    width="2000"
+    height="1250"
+    fetchpriority="high"
+    decoding="async"
+    class="absolute inset-0 h-full w-full object-cover photo-warm-grade"
+  />
+  <div class="absolute inset-0 bg-gradient-to-t from-charcoal/90 via-charcoal/30 to-charcoal/10" aria-hidden="true"></div>
+
+  <div class="relative mx-auto w-full max-w-7xl px-6 pb-16 text-cream md:px-8 md:pb-24">
+    <h1 class="text-4xl md:text-[56px]">{restaurant.name}</h1>
+    <p class="mt-3 text-lg md:text-[20px] text-cream/90">{restaurant.tagline}</p>
+    <div class="mt-8 flex flex-wrap gap-4">
+      <a href="/menu" class="inline-flex min-h-11 items-center rounded-lg border border-cream px-6 py-3 font-medium text-cream hover:bg-cream hover:text-charcoal transition-colors">
+        View Menu
+      </a>
+      <a href="/reservations" class="inline-flex min-h-11 items-center rounded-lg bg-copper px-6 py-3 font-medium text-cream hover:bg-copper-dark transition-colors">
+        Reserve a Table
+      </a>
+    </div>
+  </div>
+</section>
