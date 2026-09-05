@@ -21,11 +21,21 @@ export const GALLERY_CATEGORY_LABELS: Record<(typeof GALLERY_CATEGORY_ORDER)[num
 
 export type DietaryTag = 'v' | 'vg' | 'gf' | 'df' | 'nf' | 'spicy';
 
+export const DIETARY_LEGEND = [
+  { code: 'v', label: 'Vegetarian' },
+  { code: 'vg', label: 'Vegan' },
+  { code: 'gf', label: 'Gluten-Free' },
+  { code: 'df', label: 'Dairy-Free' },
+  { code: 'nf', label: 'Nut-Free' },
+] as const;
+
+// Text/border colors use -deep variants of sage and amber: the base brand hues
+// (visual-design-bible.md) don't clear WCAG AA at badge text size on Cream.
 export const DIETARY_TAGS: Record<DietaryTag, { label: string; className: string }> = {
-  v: { label: 'V', className: 'border border-sage text-sage' },
-  vg: { label: 'VG', className: 'bg-sage text-cream' },
-  gf: { label: 'GF', className: 'border border-amber text-amber' },
-  df: { label: 'DF', className: 'border border-stone text-stone' },
+  v: { label: 'V', className: 'border border-sage-deep text-charcoal' },
+  vg: { label: 'VG', className: 'bg-sage-deep/15 border border-sage-deep text-charcoal' },
+  gf: { label: 'GF', className: 'border border-amber-deep text-charcoal' },
+  df: { label: 'DF', className: 'border border-stone text-charcoal' },
   nf: { label: 'NF', className: 'border border-charcoal/40 text-charcoal' },
   spicy: { label: 'Spicy', className: 'text-copper' },
 };

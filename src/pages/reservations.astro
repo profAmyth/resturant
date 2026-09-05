@@ -21,8 +21,8 @@ const hours = condensedHours(restaurant.hours);
     <div class="mt-10 grid grid-cols-1 gap-8 sm:grid-cols-2">
       <div>
         <h2 class="text-xl font-display">Prefer to call?</h2>
-        <a href={phoneHref(restaurant.phone)} class="mt-2 inline-block text-copper hover:underline">{restaurant.phone}</a>
-        <p class="mt-2 text-sm text-stone">We take phone reservations during service hours:</p>
+        <a href={phoneHref(restaurant.phone)} class="mt-2 inline-block text-copper-dark hover:underline">{restaurant.phone}</a>
+        <p class="mt-2 text-sm text-charcoal/70">We take phone reservations during service hours:</p>
         <ul class="mt-1 space-y-0.5 text-sm text-charcoal/80">
           {hours.filter((entry) => entry.time !== 'Closed').map((entry) => (
             <li>{entry.days}: {entry.time}</li>
@@ -34,7 +34,7 @@ const hours = condensedHours(restaurant.hours);
         <p class="mt-2 text-sm text-charcoal/80">
           Planning something for 8 or more guests? We'd love to help you set it up.
         </p>
-        <a href="/contact" class="mt-2 inline-block text-copper hover:underline">Get in touch &rarr;</a>
+        <a href="/contact" class="mt-2 inline-block text-copper-dark hover:underline">Get in touch &rarr;</a>
       </div>
     </div>
   </section>

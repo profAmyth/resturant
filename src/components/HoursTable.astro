@@ -9,7 +9,7 @@ const today = new Date().toLocaleDateString('en-US', { weekday: 'long' });
   <caption class="sr-only">Weekly hours</caption>
   <tbody>
     {restaurant.hours.map((entry) => (
-      <tr class:list={['border-b border-stone/20 last:border-0', entry.day === today && 'font-medium text-copper']}>
+      <tr class:list={['border-b border-stone/20 last:border-0', entry.day === today && 'font-medium text-copper-dark']}>
         <th scope="row" class="py-2 pr-4">{entry.day}</th>
         <td class="py-2">{timeRange(entry)}</td>
       </tr>

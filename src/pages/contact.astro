@@ -26,8 +26,8 @@ import { restaurant, phoneHref } from '../lib/restaurant';
         </a>
 
         <h2 class="mt-10 text-xl font-display">Contact</h2>
-        <a href={phoneHref(restaurant.phone)} class="mt-2 block text-copper hover:underline">{restaurant.phone}</a>
-        <a href={`mailto:${restaurant.email}`} class="mt-1 block text-copper hover:underline">{restaurant.email}</a>
+        <a href={phoneHref(restaurant.phone)} class="mt-2 block text-copper-dark hover:underline">{restaurant.phone}</a>
+        <a href={`mailto:${restaurant.email}`} class="mt-1 block text-copper-dark hover:underline">{restaurant.email}</a>
 
         <h2 class="mt-10 text-xl font-display">Hours</h2>
         <div class="mt-2 max-w-xs">
@@ -37,10 +37,10 @@ import { restaurant, phoneHref } from '../lib/restaurant';
         <h2 class="mt-10 text-xl font-display">Follow Along</h2>
         <div class="mt-3 flex gap-4">
           {restaurant.social.instagram && (
-            <a href={restaurant.social.instagram} class="text-copper hover:underline">Instagram</a>
+            <a href={restaurant.social.instagram} class="text-copper-dark hover:underline">Instagram</a>
           )}
           {restaurant.social.facebook && (
-            <a href={restaurant.social.facebook} class="text-copper hover:underline">Facebook</a>
+            <a href={restaurant.social.facebook} class="text-copper-dark hover:underline">Facebook</a>
           )}
         </div>
       </div>

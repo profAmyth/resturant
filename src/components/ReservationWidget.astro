@@ -5,7 +5,7 @@ const timeSlots = ['5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 
 ---
 
 <div class="rounded-xl border border-stone/30 bg-warm-white p-6 md:p-8">
-  <p class="uppercase-label text-sm text-stone">{restaurant.reservation.widgetLabel}</p>
+  <p class="uppercase-label text-sm text-charcoal/70">{restaurant.reservation.widgetLabel}</p>
 
   <form id="reservation-form" class="mt-4 space-y-6">
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -47,7 +47,7 @@ const timeSlots = ['5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 
               class="peer sr-only"
               checked={index === 2}
             />
-            <span class="flex min-h-11 items-center justify-center rounded-lg border border-stone/40 px-2 text-sm text-charcoal peer-checked:border-copper peer-checked:bg-copper peer-checked:text-cream peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-copper">
+            <span class="flex min-h-11 items-center justify-center rounded-lg border border-stone/40 px-2 text-sm text-charcoal peer-checked:border-copper-dark peer-checked:bg-copper-dark peer-checked:text-cream peer-focus-visible:outline peer-focus-visible:outline-2 peer-focus-visible:outline-offset-2 peer-focus-visible:outline-copper">
               {time}
             </span>
           </label>
@@ -57,7 +57,7 @@ const timeSlots = ['5:00 PM', '5:30 PM', '6:00 PM', '6:30 PM', '7:00 PM', '7:30 
 
     <button
       type="submit"
-      class="flex min-h-11 w-full items-center justify-center rounded-lg bg-copper px-6 py-3 font-medium text-cream hover:bg-copper-dark transition-colors"
+      class="flex min-h-11 w-full items-center justify-center rounded-lg bg-copper-dark px-6 py-3 font-medium text-cream hover:bg-copper transition-colors"
     >
       Find a Table
     </button>

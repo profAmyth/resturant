@@ -5,12 +5,23 @@
 @theme {
   --color-copper: #B8622C;
   --color-copper-dark: #8C4A1F;
+  /* Base Copper (#B8622C) as text/fill-with-light-text only clears ~3.9:1 against
+     Cream or Charcoal — short of WCAG AA's 4.5:1 for normal text. copper-dark
+     (already Burnt Copper, the documented hover shade) covers copper-as-text on
+     light backgrounds; copper-light is a lightened copper for copper-as-text on
+     the dark charcoal header, where a darker shade would go the wrong direction. */
+  --color-copper-light: #D19976;
   --color-charcoal: #2A2622;
   --color-cream: #F7F2EA;
   --color-warm-white: #FFFFFF;
   --color-sage: #6B7A5E;
   --color-amber: #D9A441;
   --color-stone: #8A8378;
+  /* Darkened variants of sage/amber for text and borders on Cream — the base brand
+     hues fall short of WCAG AA contrast (verified: sage ~4.1:1 as text, amber ~2:1
+     as a border) at their documented tint, per acceptance-tests.md #31. */
+  --color-sage-deep: #4B5542;
+  --color-amber-deep: #8D6B2A;
 
   --font-display: "Fraunces Variable", Georgia, "Times New Roman", serif;
   --font-body: "Inter Variable", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
